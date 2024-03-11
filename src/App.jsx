@@ -1,6 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
+
 
 function App() {
+  const {scrollYProgress: completionProgress} = useScroll();
   const gridContainerVarients = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.25 } },
@@ -89,11 +91,14 @@ function App() {
           ></motion.div>
         </motion.div>
 
-        <motion.div
-          variants={gridSquareVarients}
-          className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
-        ></motion.div>
+        <motion.div variants={gridSquareVarients} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
+          <motion.div className="w-40 aspect-square bg-gray-50/20">
+            <motion.div className="w-full bg-gray-400 rounded-xl h-full origin-bottom" 
+              style={{scaleY: completionProgress}}>
+            </motion.div>
+          </motion.div>
 
+        </motion.div>
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
