@@ -1,8 +1,7 @@
 import { motion, useScroll } from "framer-motion";
 
-
 function App() {
-  const {scrollYProgress: completionProgress} = useScroll();
+  const { scrollYProgress: completionProgress } = useScroll();
   const gridContainerVarients = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.25 } },
@@ -21,6 +20,7 @@ function App() {
         animate="show"
         className="grid grid-cols-3 p-10 gap-10"
       >
+
         {/* Fade Up */}
         <motion.div
           variants={gridSquareVarients}
@@ -39,6 +39,8 @@ function App() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           ></motion.div>
         </motion.div>
+
+
 
         {/* shape shifting */}
         <motion.div
@@ -61,6 +63,8 @@ function App() {
           ></motion.div>
         </motion.div>
 
+
+
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -79,6 +83,8 @@ function App() {
           </motion.button>
         </motion.div>
 
+
+
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -91,14 +97,21 @@ function App() {
           ></motion.div>
         </motion.div>
 
-        <motion.div variants={gridSquareVarients} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
-          <motion.div className="w-40 aspect-square bg-gray-50/20">
-            <motion.div className="w-full bg-gray-400 rounded-xl h-full origin-bottom" 
-              style={{scaleY: completionProgress}}>
-            </motion.div>
-          </motion.div>
 
+
+        <motion.div
+          variants={gridSquareVarients}
+          className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
+        >
+          <motion.div className="w-40 aspect-square bg-gray-50/20">
+            <motion.div
+              className="w-full bg-gray-400 rounded-xl h-full origin-bottom"
+              style={{ scaleY: completionProgress }}
+            ></motion.div>
+          </motion.div>
         </motion.div>
+
+        
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
