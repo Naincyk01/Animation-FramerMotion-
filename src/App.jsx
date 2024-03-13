@@ -20,7 +20,6 @@ function App() {
         animate="show"
         className="grid grid-cols-3 p-10 gap-10"
       >
-
         {/* Fade Up */}
         <motion.div
           variants={gridSquareVarients}
@@ -39,8 +38,6 @@ function App() {
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
           ></motion.div>
         </motion.div>
-
-
 
         {/* shape shifting */}
         <motion.div
@@ -63,8 +60,6 @@ function App() {
           ></motion.div>
         </motion.div>
 
-
-
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -83,8 +78,6 @@ function App() {
           </motion.button>
         </motion.div>
 
-
-
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -96,8 +89,6 @@ function App() {
             dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           ></motion.div>
         </motion.div>
-
-
 
         <motion.div
           variants={gridSquareVarients}
@@ -111,7 +102,6 @@ function App() {
           </motion.div>
         </motion.div>
 
-        
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
