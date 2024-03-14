@@ -72,7 +72,7 @@ function App() {
               color: "black",
             }}
             transition={{ bounceDamping: 0, bounceStiffness: 600 }}
-            className="bg-emerald-600 py-4 w-1/2 rounded-lg text-2xl text-gray-100 font-light tracking-wide"
+            className="bg-blue-500 py-4 w-1/2 rounded-lg text-2xl text-gray-100 font-light tracking-wide"
           >
             Subscribe
           </motion.button>
