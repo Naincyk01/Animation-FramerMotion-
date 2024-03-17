@@ -1,4 +1,10 @@
-import { motion, useAnimation, useInView, useScroll, useTransform } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useInView,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { useEffect, useRef } from "react";
 
 function App() {
@@ -24,36 +30,35 @@ function App() {
       pathLength: 1,
       fill: "rgba(252, 211, 77, 1)",
     },
-  }
+  };
 
+  const containerRef = useRef(null);
 
-  const containerRef = useRef(null)
-
-  const isInView = useInView(containerRef, { once: true })
-  const mainControls = useAnimation()
+  const isInView = useInView(containerRef, { once: true });
+  const mainControls = useAnimation();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end end"],
-  })
+  });
 
   const paragraphOneValue = useTransform(
     scrollYProgress,
     [0, 1],
     ["-100%", "0%"]
-  )
+  );
 
   const paragraphTwoValue = useTransform(
     scrollYProgress,
     [0, 1],
     ["100%", "0%"]
-  )
+  );
 
   useEffect(() => {
     if (isInView) {
-      mainControls.start("visible")
+      mainControls.start("visible");
     }
-  }, [isInView])
+  }, [isInView]);
 
   return (
     <div className="flex flex-col gap-10 overflow-x-hidden">
@@ -103,7 +108,7 @@ function App() {
           ></motion.div>
         </motion.div>
 
-{/*Hover and T ap  */}
+        {/*Hover and T ap  */}
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -122,7 +127,7 @@ function App() {
           </motion.button>
         </motion.div>
 
-{/* Drag */}
+        {/* Drag */}
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -135,7 +140,7 @@ function App() {
           ></motion.div>
         </motion.div>
 
-{/* Scroll Progression */}
+        {/* Scroll Progression */}
         <motion.div
           variants={gridSquareVarients}
           className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
@@ -148,42 +153,42 @@ function App() {
           </motion.div>
         </motion.div>
 
-
-{/* SVG Animation */}
-        <motion.div variants={gridSquareVarients} className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10">
-
-<motion.svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  className="w-1/2 stroke-amber-500 stroke-[0.5]"
->
-  <motion.path
-    d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
-    variants={svgIconVariants}
-    initial="hidden"
-    animate="visible"
-    transition={{
-      default: {
-        duration: 2,
-        ease: "easeInOut",
-        delay: 1,
-        repeat: Infinity,
-        repeatType: "reverse",
-        repeatDelay: 1,
-      },
-      fill: {
-        duration: 2,
-        ease: "easeIn",
-        delay: 2,
-        repeat: Infinity,
-        repeatType: "reverse",
-        repeatDelay: 1,
-      },
-    }}
-  />
-
-</motion.svg>
-</motion.div>
+        {/* SVG Animation */}
+        <motion.div
+          variants={gridSquareVarients}
+          className="bg-slate-800 aspect-square rounded-lg justify-center flex items-center gap-10"
+        >
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            className="w-1/2 stroke-amber-500 stroke-[0.5]"
+          >
+            <motion.path
+              d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+              variants={svgIconVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{
+                default: {
+                  duration: 2,
+                  ease: "easeInOut",
+                  delay: 1,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  repeatDelay: 1,
+                },
+                fill: {
+                  duration: 2,
+                  ease: "easeIn",
+                  delay: 2,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  repeatDelay: 1,
+                },
+              }}
+            />
+          </motion.svg>
+        </motion.div>
       </motion.section>
 
       <section className="flex flex-col gap-10 mb-10" ref={containerRef}>
@@ -217,8 +222,7 @@ function App() {
           Have fun playing with Framer Motion. It is a very powerful library,
           when used properly. Add some life to your websites.
         </motion.p>
-        </section>
-      
+      </section>
     </div>
   );
 }
