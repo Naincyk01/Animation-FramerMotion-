@@ -218,7 +218,7 @@ function App() {
         </motion.p>
         <motion.p
           style={{ translateX: paragraphTwoValue }}
-          className="text-slate-100 font-thin text-4xl w-1/2 mx-auto"
+          className="text-white font-thin text-4xl w-1/2 mx-auto"
         >
           Have fun playing with Framer Motion. It is a very powerful library,
           when used properly. Add some life to your websites.
