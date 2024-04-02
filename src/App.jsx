@@ -229,3 +229,27 @@ function App() {
 }
 
 export default App;
+
+
+// Framer Motion
+// An open source motion library for React, made by Framer.
+// Motion powers Framer, the web builder for creative pros. Design and ship your dream site. Zero code, maximum speed.
+// Framer Motion is an open source, production-ready library that’s designed for all creative developers.
+
+// It looks like this:
+
+// <motion.div animate={{ x: 0 }} />
+// It does all this:
+
+// Springs
+// Keyframes
+// Layout animations
+// Shared layout animations
+// Gestures (drag/tap/hover)
+// Scroll animations
+// SVG paths
+// Exit animations
+// Server-side rendering
+// Hardware-accelerated animations
+// Orchestrate animations across components
+// CSS variables
