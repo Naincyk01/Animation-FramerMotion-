@@ -211,10 +211,12 @@ function App() {
           style={{ translateX: paragraphOneValue }}
           className="text-slate-100 font-thin text-4xl w-1/2 mx-auto"
         >
-          Framer Motion is a simple yet powerful motion library for React. It powers the amazing animations and interactions in Framer, the web builder for creative pros. Zero code, maximum speed.
-          This is a basic tutorial on how to get up and running with Framer
-          Motion with some TailwindCSS. If you enjoyed this video, please leave
-          a like and also subscribe.
+          Framer Motion is a simple yet powerful motion library for React. It
+          powers the amazing animations and interactions in Framer, the web
+          builder for creative pros. Zero code, maximum speed. This is a basic
+          tutorial on how to get up and running with Framer Motion with some
+          TailwindCSS. If you enjoyed this video, please leave a like and also
+          subscribe.
         </motion.p>
         <motion.p
           style={{ translateX: paragraphTwoValue }}
@@ -229,7 +231,6 @@ function App() {
 }
 
 export default App;
-
 
 // Framer Motion
 // An open source motion library for React, made by Framer.
